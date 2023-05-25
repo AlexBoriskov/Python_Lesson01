@@ -5,7 +5,7 @@ length = int(input("Введите длину шоколадки: "))
 weight = int(input("Введите ширину шоколадки: "))
 piece = int(input("Введите размер куска: "))
 
-if piece%length==0 or piece%weight==0:
+if (piece%length==0 and piece//length <=weight) or (piece%weight==0 and piece//weight<=length):
     print("Можно оторвать кусок одним разломом!")
 else:
     print ("Нельзя!")
